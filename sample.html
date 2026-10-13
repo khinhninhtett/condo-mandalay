@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Button Hover Text</title>
+   <style>
+      .custom-button {
+         position: relative;
+         display: inline-block;
+         padding: 10px 20px;
+         background-color: #3498db;
+         color: #fff;
+         border: none;
+         cursor: pointer;
+      }
+
+      .custom-button:hover::before {
+         content: "Click me to do something";
+         position: absolute;
+         top: -50%;
+         left: 50%;
+         transform: translateX(-50%);
+         background-color: #333;
+         color: #fff;
+         padding: 5px;
+         border-radius: 5px;
+         opacity: 0;
+         transition: opacity 0.3s ease;
+      }
+
+      .custom-button:hover::before {
+         opacity: 1;
+      }
+   </style>
+</head>
+<body>
+
+<button class="custom-button">Hover me</button>
+
+</body>
+</html>
